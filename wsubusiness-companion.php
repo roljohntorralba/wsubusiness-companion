@@ -3,7 +3,7 @@
  * Plugin Name: WebsiteSetup Business Companion
  * Plugin URI: https://wordpress.org/plugins/wsubusiness-companion/
  * Description: Extends the WebsiteSetup Business theme\&#39;s functionality. Adding the ability to create lead texts and sidebar content per page.
- * Version: 1.0.0
+ * Version: 1.1.0
  * Requires at least: 5.2
  * Requires PHP: 5.6
  * Author: WebsiteSetup
@@ -36,10 +36,12 @@ add_action( 'in_entry_header_bottom', 'add_hero_text');
 //* Prints the Sidebar Text custom field on top of the sidebar widgets
 function wsubc_render_sidebar_text() {
 	$sidebar_text = get_post_meta( get_the_id(), '_wsubc_sidebar_text_value', true);
-	$output = '<section id="custom-sidebar-text" class="widget widget-custom-sidebar-text">';
-	$output .= $sidebar_text;
-	$output .= '</section>';
-	echo $output;
+    if( $sidebar_text ) {
+    	$output = '<section id="custom-sidebar-text" class="widget widget-custom-sidebar-text">';
+    	$output .= $sidebar_text;
+    	$output .= '</section>';
+    	echo $output;
+    }
 }
 add_action( 'in_sidebar_top', 'wsubc_render_sidebar_text');
 
@@ -88,14 +90,12 @@ abstract class WSUBC_Lead_Text {
 
     public static function sidebar_text_save($post_id) {
         if (array_key_exists('wsubc_sidebar_text_field', $_POST)) {
-        	if( !empty($_POST['wsubc_sidebar_editor']) ) {
-        		$data = $_POST['wsubc_sidebar_editor'];
-        		update_post_meta(
-              $post_id,
-              '_wsubc_sidebar_text_value',
-              $data
+    		$data = $_POST['wsubc_sidebar_editor'];
+    		update_post_meta(
+                $post_id,
+                '_wsubc_sidebar_text_value',
+                $data
             );
-        	}
         }
     }
 
