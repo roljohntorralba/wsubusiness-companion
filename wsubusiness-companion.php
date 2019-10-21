@@ -115,4 +115,16 @@ add_action('add_meta_boxes', ['WSUBC_Lead_Text', 'add']);
 add_action('save_post', ['WSUBC_Lead_Text', 'lead_text_save']);
 add_action('save_post', ['WSUBC_Lead_Text', 'sidebar_text_save']);
 
+/**
+ * Plugin Update Checker
+ */
+require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+    'https://github.com/rolzan/wsubusiness_companion',
+    __FILE__,
+    'wsubusiness_companion'
+);
+//Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('stable');
+
 ?>
