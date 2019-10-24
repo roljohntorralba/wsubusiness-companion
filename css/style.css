@@ -1,0 +1,12 @@
+.wp-block-wsubc-panel {
+  color: darkred;
+  background: #fcc;
+  border: 2px solid #c99;
+  padding: 20px;
+}
+.wsubc-panel-center {
+	text-align: center;
+}
+.wsubc-panel-right {
+	text-align: right;
+}

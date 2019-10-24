@@ -24,14 +24,45 @@
 //* Block direct access to the file
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
+function wsubc_blocks() {
+    wp_register_script(
+        'wsubc-gutenberg-blocks',
+        plugins_url( 'js/blocks.js', __FILE__ ),
+        array( 'wp-blocks', 'wp-element', 'wp-editor' ),
+        filemtime( plugin_dir_path( __FILE__ ) . 'js/blocks.js' )
+    );
+
+    wp_register_style(
+        'wsubc-gutenberg-blocks-editor',
+        plugins_url( 'css/editor.css', __FILE__ ),
+        array( 'wp-edit-blocks' ),
+        filemtime( plugin_dir_path( __FILE__ ) . 'css/editor.css' )
+    );
+ 
+    wp_register_style(
+        'wsubc-gutenberg-blocks-style',
+        plugins_url( 'css/style.css', __FILE__ ),
+        array( ),
+        filemtime( plugin_dir_path( __FILE__ ) . 'css/style.css' )
+    );
+ 
+    register_block_type( 'wsubc/panel', array(
+        'style' => 'wsubc-gutenberg-blocks-style',
+        'editor_style' => 'wsubc-gutenberg-blocks-editor',
+        'editor_script' => 'wsubc-gutenberg-blocks',
+    ) );
+ 
+}
+add_action( 'init', 'wsubc_blocks' );
+
 //* Prints the Leading Text custom field below the title
-function add_hero_text() {
+function wsubc_add_hero_text() {
 	$lead_text = get_post_meta( get_the_id(), '_wsubc_lead_text_value', true);
     if( $lead_text ) {
         echo '<p class="lead">' . $lead_text . '</p>';
     }
 }
-add_action( 'in_entry_header_bottom', 'add_hero_text');
+add_action( 'in_entry_header_bottom', 'wsubc_add_hero_text');
 
 //* Prints the Sidebar Text custom field on top of the sidebar widgets
 function wsubc_render_sidebar_text() {
