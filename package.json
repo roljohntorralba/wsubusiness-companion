@@ -1,0 +1,24 @@
+{
+  "name": "wsubusiness-companion",
+  "version": "1.1.0",
+  "description": "Extends the WebsiteSetup Business theme's functionality.",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolzan/wsubusiness_companion.git"
+  },
+  "author": "rolzan",
+  "license": "GPL-2.0-only",
+  "bugs": {
+    "url": "https://github.com/rolzan/wsubusiness_companion/issues"
+  },
+  "homepage": "https://github.com/rolzan/wsubusiness_companion#readme",
+  "devDependencies": {
+    "@wordpress/scripts": "5.1.0"
+  }
+}

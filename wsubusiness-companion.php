@@ -25,11 +25,15 @@
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 function wsubc_blocks() {
+    $asset_file = include( plugin_dir_path( __FILE__ ) . 'build/index.asset.php');
+
     wp_register_script(
         'wsubc-gutenberg-blocks',
-        plugins_url( 'js/blocks.js', __FILE__ ),
+        plugins_url( 'build/index.js', __FILE__ ),
         array( 'wp-blocks', 'wp-element', 'wp-editor' ),
-        filemtime( plugin_dir_path( __FILE__ ) . 'js/blocks.js' )
+        filemtime( plugin_dir_path( __FILE__ ) . 'build/index.js' ),
+        $asset_file['dependencies'],
+        $asset_file['version']
     );
 
     wp_register_style(

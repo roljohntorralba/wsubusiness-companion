@@ -4,9 +4,9 @@
   border: 2px solid #c99;
   padding: 20px;
 }
-.wsubc-panel-center {
+.wsubc-panel-align-center {
 	text-align: center;
 }
-.wsubc-panel-right {
+.wsubc-panel-align-right {
 	text-align: right;
 }
