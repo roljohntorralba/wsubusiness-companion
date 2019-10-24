@@ -120,7 +120,7 @@ abstract class WSUBC_Lead_Text {
     }
 
     public static function sidebar_text_save($post_id) {
-        if (array_key_exists('wsubc_sidebar_text_field', $_POST)) {
+        if (array_key_exists('wsubc_sidebar_editor', $_POST)) {
     		$data = $_POST['wsubc_sidebar_editor'];
     		update_post_meta(
                 $post_id,
@@ -134,12 +134,6 @@ abstract class WSUBC_Lead_Text {
     	wp_nonce_field( basename( __FILE__ ), 'wsubc_nonce' );
 	    $wsubc_stored_meta = get_post_meta( $post->ID );
 	    wp_editor($wsubc_stored_meta['_wsubc_sidebar_text_value'][0], 'wsubc_sidebar_editor', array( "media_buttons" => true));
-	    ?>
-	    <p>
-        <label for="wsubc_sidebar_text_field" class="components-text-control__label"><?php _e( 'Sidebar text', 'wsubusiness-companion' )?></label>
-        <textarea name="wsubc_sidebar_text_field" id="wsubc_sidebar_text_field"><?php if ( isset ( $wsubc_stored_meta['_wsubc_sidebar_text_value'] ) ) echo $wsubc_stored_meta['_wsubc_sidebar_text_value'][0]; ?></textarea>
-	    </p>
-	    <?php
     }
 }
 add_action('add_meta_boxes', ['WSUBC_Lead_Text', 'add']);
