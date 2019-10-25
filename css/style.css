@@ -1,8 +1,8 @@
 .wp-block-wsubc-panel {
-  color: darkred;
-  background: #fcc;
-  border: 2px solid #c99;
-  padding: 20px;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  font-size: 0.889em;
+  line-height: 1.4;
 }
 .wsubc-panel-align-center {
 	text-align: center;
