@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#D1D6DA;}
+	.st1{clip-path:url(#XMLID_5_);}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#00658E;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#065676;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#BCDCE9;}
+</style>
+<rect id="XMLID_1_" y="0" class="st0" width="256" height="256"/>
+<g id="wsu-icon-blue.psd">
+	<defs>
+		<rect id="XMLID_6_" x="48.3" y="47" width="159.3" height="162.1"/>
+	</defs>
+	<clipPath id="XMLID_5_">
+		<use xlink:href="#XMLID_6_"  style="overflow:visible;"/>
+	</clipPath>
+	<g id="Logo_2" class="st1">
+		<g id="Shape_1">
+			<g id="XMLID_35_">
+				<polygon id="XMLID_36_" class="st2" points="48.3,63.8 65.3,166 127.9,209 127.9,47 				"/>
+			</g>
+		</g>
+		<g id="Shape_1_1_">
+			<g id="XMLID_33_">
+				<polygon id="XMLID_34_" class="st3" points="127.9,47 127.9,209 190.5,166 207.5,63.8 				"/>
+			</g>
+		</g>
+		<g id="Shape_2">
+			<g id="XMLID_29_">
+				<polygon id="XMLID_32_" class="st4" points="117.8,68.1 117.8,164.9 92.6,146.6 82.1,75.7 67.3,79 79.9,154.6 127.8,189 
+					127.8,65.5 				"/>
+			</g>
+		</g>
+		<g id="Shape_2_1_">
+			<g id="XMLID_25_">
+				<polygon id="XMLID_26_" class="st5" points="173.6,75.7 163.1,146.6 137.9,164.9 137.9,68.1 127.8,65.5 127.8,189 175.8,154.6 
+					188.4,79 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
