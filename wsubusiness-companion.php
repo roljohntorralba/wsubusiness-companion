@@ -3,7 +3,7 @@
  * Plugin Name: WebsiteSetup Business Companion
  * Plugin URI: https://wordpress.org/plugins/wsubusiness-companion/
  * Description: Extends the WebsiteSetup Business theme\&#39;s functionality. Adding the ability to create lead texts and sidebar content per page.
- * Version: 1.3.0
+ * Version: 1.3.1
  * Requires at least: 5.2
  * Requires PHP: 5.6
  * Author: WebsiteSetup
