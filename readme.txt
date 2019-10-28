@@ -4,7 +4,7 @@ Tags: gutenberg, theme extension
 Requires at least: 5.0
 Tested up to: 5.2
 Requires PHP: 5.6
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,9 +37,12 @@ No. Installing this plugin with other themes will give you unexpected results si
 No, it is not required but it is recommended to maximize the theme\'s functionality and editing experience.
 
 == Screenshots ==
-1. Screenshot 1 desc
-2. Screenshot 2 desc
-3. Screenshot 3 desc
+1. Adding the Leading Text from the editor
+2. Adding the Sidebar Text from the editor
+3. Custom Gutenberg Block in the Layout Elements category
+4. WSB: Panel Gutenberg Block in action
+5. Available options for WSB: Panel Block
+6. The front-end results with the Leading Text, Sidebar Text, and WSB: Panel Block
 
 == Changelog ==
 

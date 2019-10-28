@@ -3,7 +3,7 @@
  * Plugin Name: WebsiteSetup Business Companion
  * Plugin URI: https://wordpress.org/plugins/wsubusiness-companion/
  * Description: Extends the WebsiteSetup Business theme\&#39;s functionality. Adding the ability to create lead texts and sidebar content per page.
- * Version: 1.2.0
+ * Version: 1.3.0
  * Requires at least: 5.2
  * Requires PHP: 5.6
  * Author: WebsiteSetup
@@ -137,7 +137,7 @@ abstract class WSUBC_Lead_Text {
     public static function sidebar_text_html($post) {
     	wp_nonce_field( basename( __FILE__ ), 'wsubc_nonce' );
 	    $wsubc_stored_meta = get_post_meta( $post->ID );
-	    wp_editor($wsubc_stored_meta['_wsubc_sidebar_text_value'][0], 'wsubc_sidebar_editor', array( "media_buttons" => true));
+	    wp_editor($wsubc_stored_meta['_wsubc_sidebar_text_value'][0], 'wsubc_sidebar_editor', array( 'media_buttons' => true, 'tinymce' => false, 'quicktags' => true, ));
     }
 }
 add_action('add_meta_boxes', ['WSUBC_Lead_Text', 'add']);
